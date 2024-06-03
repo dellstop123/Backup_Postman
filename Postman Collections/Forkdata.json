@@ -15,7 +15,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "140da7fe-f48d-4d71-afbe-5254031f9bbf",
+								"id": "478573b6-c1ff-489e-a7b5-a80f90b4c16f",
 								"exec": [
 									"//Fixed syntax",
 									"pm.test(\"Response status code is 200\", function () {",
@@ -24,6 +24,8 @@
 									"        pm.response.to.have.status(200);",
 									"",
 									"});",
+									"",
+									"pm.variables.get(\"variable_key\");",
 									"pm.globals.get(\"variable_key\");",
 									"pm.test(\"Response time is less than 500ms\", function () {",
 									"  pm.expect(pm.response.responseTime).to.be.below(6000);",
@@ -67,6 +69,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
 						"url": "http://randomfox.ca/floof/",
 						"description": "### Request Description\n\nThis endpoint makes an HTTP GET request to retrieve a random image and link of a fox. There are no request parameters involved in this request.\n\n### Response\n\nThe response for this request is in JSON format and includes the following fields:\n\n- `image`: A string representing the URL of the random fox image.\n    \n- `link`: A string representing the URL of the source for the random fox image.\n    \n\n### JSON Schema\n\n``` json\n{\n    \"type\": \"object\",\n    \"properties\": {\n        \"image\": {\n            \"type\": \"string\"\n        },\n        \"link\": {\n            \"type\": \"string\"\n        }\n    }\n}\n\n ```"
 					},
