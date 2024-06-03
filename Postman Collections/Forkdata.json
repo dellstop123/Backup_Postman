@@ -25,7 +25,7 @@
 									"",
 									"});",
 									"",
-									"pm.variables.get(\"variable_key\");",
+									"pm.variables.get(\"guneet\");",
 									"pm.globals.get(\"variable_key\");",
 									"pm.test(\"Response time is less than 500ms\", function () {",
 									"  pm.expect(pm.response.responseTime).to.be.below(6000);",
