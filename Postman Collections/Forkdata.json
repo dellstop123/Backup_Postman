@@ -413,6 +413,21 @@
 			"item": [
 				{
 					"name": "Global Temperature Anamoly",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9933e50f-829b-4c74-92aa-29b0e1d233ee",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "109a0239-a6a2-4049-8474-58d97c4409fe",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
