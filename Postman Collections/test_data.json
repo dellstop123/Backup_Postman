@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "254c3b1c-6535-48c0-bc96-c3f6797664c8",
+		"name": "Data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ahmed",
+			"id": "9960285c-55c5-4484-a436-03de757f0e64",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "{{url}}/ahmed",
+				"description": "### GET /ahmed\n\nThis endpoint retrieves data related to \"ahmed\".\n\n#### Request\n\nNo request body is required for this endpoint.\n\n#### Response\n\nThe response will be in JSON format and will have the following schema:\n\n``` c\n{\n    \"type\": \"object\",\n    \"properties\": {\n        \"data\": {\n            \"type\": \"string\"\n        }\n    }\n}\n\n ```\n\nThe `data` property may contain a string value."
+			},
+			"response": [
+				{
+					"id": "1ca103bf-6669-4da3-86ed-ea526b04a1b7",
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "{{url}}/ahmed"
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\"data\":\"message\"}"
+				}
+			]
+		},
+		{
+			"name": "adduser",
+			"id": "fd6d48ee-c1d1-45dc-ac30-67c1b113d6b6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"data\":\"False\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/adduser"
+			},
+			"response": [
+				{
+					"id": "82d4b8d6-6a27-41f9-a7a2-b6ab9db50fb1",
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"status\":\"False\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/adduser"
+					},
+					"code": 201,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\"status\":False}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"id": "9840a320-3302-4ffb-9b93-d95a37ad030f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\"data\": \"Unavailable\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/updateuser"
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/adduser",
+			"id": "61e5534a-80de-40e1-b0d3-565c708baf17",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/plain"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"status\":\"False\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/adduser"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://f0d7753d-58bc-427a-997a-736072d8c608.mock.pstmn.io"
+		}
+	]
+}
