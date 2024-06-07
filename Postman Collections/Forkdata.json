@@ -18,7 +18,7 @@
 								"id": "478573b6-c1ff-489e-a7b5-a80f90b4c16f",
 								"exec": [
 									"//Fixed syntax",
-									"pm.test(\"Response status code is 200\", function () {",
+									"pm.test(\"Response status code is a be 200\", function () {",
 									"",
 									"",
 									"        pm.response.to.have.status(200);",
