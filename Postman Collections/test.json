@@ -16,7 +16,8 @@
 							"pm.environment.get(\"variable_key\");",
 							"pm.globals.get(\"variable_key\");",
 							"pm.variables.get(\"variable_key\");",
-							"pm.collectionVariables.get(\"variable_key\");"
+							"pm.collectionVariables.get(\"variable_key\");",
+							"pm.collectionVariables.get(\"variable_key\")"
 						],
 						"type": "text/javascript",
 						"packages": {}
