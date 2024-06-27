@@ -149,7 +149,7 @@
 									"pm.test(\"Scenario: Verify that the API returns the correct status code for a resource not found (e.g., 404 Not Found)\", function () {",
 									"//run something like this https://cataas.com/tiwuetqi",
 									"pm.sendRequest({",
-									"    url: \"htps://cataas.com/3984639463badurlpass\",",
+									"    url: \"https://cataas.com/floof/3984639463badurlpass\",",
 									"    method: \"GET\",",
 									"    header: {",
 									"    \"Content-Type\": \"application/json\"}",
@@ -198,11 +198,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://cataas.com",
+							"raw": "https://cataas.com/floof/3984639463badurlpass",
 							"protocol": "https",
 							"host": [
 								"cataas",
 								"com"
+							],
+							"path": [
+								"floof",
+								"3984639463badurlpass"
 							],
 							"query": [
 								{
