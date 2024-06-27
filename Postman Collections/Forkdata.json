@@ -139,19 +139,24 @@
 								"exec": [
 									"",
 									"//puneet june 27th",
-									"//1.successful response",
-									"pm.test(\"Scenario: Verify that the API returns the correct status code for a successful request (e.g., 200 OK)\", function () {",
+									"// //1.successful response",
+									"// pm.test(\"Scenario: Verify that the API returns the correct status code for a successful request (e.g., 200 OK)\", function () {",
 									"",
-									"    let test1 = pm.response.code;",
-									"    //console.log(test1); //this is to test what response we are getting in console",
-									"    pm.expect(test1).to.equal(200);",
-									"})",
+									"//     let test1 = pm.response.code;",
+									"//     //console.log(test1); //this is to test what response we are getting in console",
+									"//     pm.expect(test1).to.equal(200);",
+									"// })",
 									"pm.test(\"Scenario: Verify that the API returns the correct status code for a resource not found (e.g., 404 Not Found)\", function () {",
 									"//run something like this https://cataas.com/tiwuetqi",
-									"pm.sendRequest(\"https://cataas.com/323232\", function (){",
-									"let test2 = pm.response.status;",
+									"pm.sendRequest({",
+									"    url: \"htps://cataas.com/3984639463badurlpass\",",
+									"    method: GET,",
+									"    header: {",
+									"    \"Content-Type\": \"Application/json\"}",
+									"",
+									"}, function (capture){",
+									"let test2 =capture.status;",
 									"pm.expect(test2).to.eq(404);",
-									"})",
 									"})",
 									"",
 									"",
@@ -190,14 +195,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://cataas.com/e29w36y`209360`",
+							"raw": "https://cataas.com",
 							"protocol": "https",
 							"host": [
 								"cataas",
 								"com"
-							],
-							"path": [
-								"e29w36y`209360`"
 							],
 							"query": [
 								{
