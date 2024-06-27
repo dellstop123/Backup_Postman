@@ -149,7 +149,7 @@
 									"pm.test(\"Scenario: Verify that the API returns the correct status code for a resource not found (e.g., 404 Not Found)\", function () {",
 									"//run something like this https://cataas.com/tiwuetqi",
 									"pm.sendRequest(\"https://cataas.com/323232\", function (){",
-									"let test2 = pm.response.code;",
+									"let test2 = pm.response.status;",
 									"pm.expect(test2).to.eq(404);",
 									"})",
 									"})",
