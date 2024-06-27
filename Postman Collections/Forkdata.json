@@ -142,7 +142,7 @@
 									"//1.successful response",
 									"pm.test(\"Scenario: Verify that the API returns the correct status code for a successful request (e.g., 200 OK)\", function () {",
 									"",
-									"    let test1 = pm.response.json;",
+									"    let test1 = pm.response;",
 									"    console.log(test1);",
 									"",
 									"",
