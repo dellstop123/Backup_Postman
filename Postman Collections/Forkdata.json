@@ -188,20 +188,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{$randomUrl}}",
+							"raw": "https://cataas.com",
+							"protocol": "https",
 							"host": [
-								"{{$randomUrl}}"
+								"cataas",
+								"com"
 							],
 							"query": [
 								{
 									"key": "json",
 									"value": "true",
-									"disabled": true
-								},
-								{
-									"key": "",
-									"value": "",
-									"type": "text",
 									"disabled": true
 								}
 							]
