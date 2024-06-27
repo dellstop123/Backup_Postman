@@ -140,17 +140,17 @@
 									"",
 									"//puneet june 27th",
 									"//1.successful response",
-									"pm.test(\"Scenario: Verify that the API returns the correct status code for a successful request (e.g., 200 OK)\", function () {",
+									"// pm.test(\"Scenario: Verify that the API returns the correct status code for a successful request (e.g., 200 OK)\", function () {",
 									"",
-									"    let test1 = pm.response.code;",
-									"    //console.log(test1); //this is to test what response we are getting in console",
-									"    pm.expect(test1).to.equal(200);",
-									"})",
+									"//     let test1 = pm.response.code;",
+									"//     //console.log(test1); //this is to test what response we are getting in console",
+									"//     pm.expect(test1).to.equal(200);",
+									"// })",
 									"pm.test(\"Scenario: Verify that the API returns the correct status code for a resource not found (e.g., 404 Not Found)\", function () {",
 									"//run something like this https://cataas.com/tiwuetqi",
 									"let test2 = pm.response.code;",
 									"pm.expect(test2).to.eq(404);",
-									")}",
+									"})",
 									"",
 									"",
 									"",
@@ -188,14 +188,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://cataas.com/tiwuetqi?https://cataas.com/tiwuetqi=\n{{$randomUrl}}",
-							"protocol": "https",
+							"raw": "{{$randomUrl}}",
 							"host": [
-								"cataas",
-								"com"
-							],
-							"path": [
-								"tiwuetqi"
+								"{{$randomUrl}}"
 							],
 							"query": [
 								{
@@ -208,10 +203,6 @@
 									"value": "",
 									"type": "text",
 									"disabled": true
-								},
-								{
-									"key": "https://cataas.com/tiwuetqi",
-									"value": "\n{{$randomUrl}}"
 								}
 							]
 						},
