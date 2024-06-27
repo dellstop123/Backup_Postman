@@ -156,7 +156,7 @@
 									"",
 									"}, function(err, capture){ //capture is user made like Puneet here we are forcefully grabbing the respose in cature parameter",
 									"let test2 =capture.code;",
-									"console.log(err);",
+									"console.log(test2);",
 									"pm.expect(test2).to.eq(404);",
 									"})",
 									"});",
