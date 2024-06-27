@@ -154,9 +154,9 @@
 									"    header: {",
 									"    \"Content-Type\": \"application/json\"}",
 									"",
-									"}, function (capture){",
-									"let test2 =capture.status;",
-									"console.log(test2);",
+									"}, function(capture){",
+									"//let test2 =capture.status;",
+									"console.log(capture);",
 									"//pm.expect(test2).to.eq(404);",
 									"})",
 									"});",
@@ -198,14 +198,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://cataas.com/floof/3984639463badurlpass",
+							"raw": "https://cataas.com/cat/3984639463badurlpass",
 							"protocol": "https",
 							"host": [
 								"cataas",
 								"com"
 							],
 							"path": [
-								"floof",
+								"cat",
 								"3984639463badurlpass"
 							],
 							"query": [
