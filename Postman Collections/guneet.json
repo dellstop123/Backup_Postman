@@ -26,7 +26,7 @@
 									"});",
 									"pm.globals.get(\"variable_key\");",
 									"pm.test(\"Response time is less than 500ms\", function () {",
-									"  pm.expect(pm.response.responseTime).to.be.below(60);",
+									"  pm.expect(pm.response.responseTime).to.be.below(6);",
 									"});",
 									"",
 									"pm.test(\"Response has the required schema fields\", function () {",
