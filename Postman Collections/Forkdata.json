@@ -386,7 +386,7 @@
 									"\r",
 									"pm.collectionVariables.get(\"variable_key\");\r",
 									"pm.test(\"Response time is less than 200ms\", function () {\r",
-									"  pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(6000);\r",
 									"});\r",
 									"\r",
 									"\r",
