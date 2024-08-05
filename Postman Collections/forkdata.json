@@ -548,7 +548,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "1c67cafb-629e-4a0f-806f-6664a12236a5",
+				"id": "9397828d-6e0b-40ec-bc59-6341200fab0f",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -558,13 +558,20 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "85951ac3-5a05-40b4-b81e-fd6efa9621a7",
+				"id": "f5ca0c5c-2c27-40c8-b507-fa57391497aa",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
 					""
 				]
 			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://randomfox.ca/",
+			"type": "string"
 		}
 	]
 }
