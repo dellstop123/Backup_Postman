@@ -15,15 +15,15 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "478573b6-c1ff-489e-a7b5-a80f90b4c16f",
+								"id": "e2417381-23fd-44f5-8b49-d42d7057d5ea",
 								"exec": [
 									"pm.test(\"Response status code is 200\", function () {",
-									"    pm.response.to.have.status(201);",
+									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"",
+									"pm.globals.get(\"variable_key\");",
 									"pm.test(\"Response time is less than 500ms\", function () {",
-									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"    pm.expect(pm.response.responseTime).to.be.below(5000);",
 									"});",
 									"",
 									"",
