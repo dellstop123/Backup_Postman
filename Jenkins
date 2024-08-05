@@ -1,0 +1,25 @@
+pipeline {
+  agent any
+
+  tools {nodejs "Node"}
+
+  stages {
+    stage('Install Postman CLI') {
+      steps {
+        sh 'curl -o- "https://dl-cli.pstmn.io/install/osx_64.sh" | sh'
+      }
+    }
+
+    stage('Postman CLI Login') {
+      steps {
+        sh '/usr/local/bin/postman login --with-api-key PMAK-66425e4bfae37500014d0163-c2af25d3f504283b58dc97f4af976fad43'
+      }
+    }
+
+    stage('Running collection') {
+      steps {
+        sh '/usr/local/bin/postman collection run "6601205-97537203-f852-48b0-b651-9c5e6b28b993" -e "6601205-7a1e23fc-599f-4384-9944-d0545f0ed1c1"'
+      }
+    }
+  }
+}
