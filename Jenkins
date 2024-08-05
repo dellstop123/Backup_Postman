@@ -12,7 +12,7 @@ pipeline {
 
     stage('Postman CLI Login') {
       steps {
-        sh '/usr/local/bin/postman login --with-api-key PMAK-66425e4bfae37500014d0163-c2af25d3f504283b58dc97f4af976fad43'
+        sh '/usr/local/bin/postman login --with-api-key 
       }
     }
 
