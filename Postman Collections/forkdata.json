@@ -85,16 +85,14 @@
 									"    pm.expect(test1).to.equal(200);",
 									"})",
 									"pm.test(\"Scenario: Verify that the API returns the correct status code for a resource not found (e.g., 404 Not Found)\", function () {",
-									"//run something like this https://cataas.com/tiwuetqi",
-									"pm.sendRequest({ //this is way to send request header to the server. becasue we want a bad URL here.",
+									"pm.sendRequest({ ",
 									"    url: \"https://cataas.com/cat/3984639463badurlpass\",",
 									"    method: \"GET\",",
 									"    header: {",
 									"    \"Content-Type\": \"application/json\"}",
 									"",
-									"}, function(err, capture){ //capture is user made like Puneet here we are forcefully grabbing the respose in cature parameter",
+									"}, function(err, capture){ ",
 									"let test2 =capture.code;",
-									"//console.log(test2); //just see the console",
 									"pm.expect(test2).to.eq(404);",
 									"})",
 									"});",
@@ -134,7 +132,13 @@
 							"query": [
 								{
 									"key": "json",
-									"value": "true",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"value": "{{foxImage}}",
+									"type": "text",
 									"disabled": true
 								}
 							]
