@@ -56,13 +56,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "graphql",
-							"graphql": {
-								"query": "",
-								"variables": ""
-							}
-						},
 						"url": "{{url}}floof/",
 						"description": "### Request Description\n\nThis endpoint makes an HTTP GET request to retrieve a random image and link of a fox. There are no request parameters involved in this request.\n\n### Response\n\nThe response for this request is in JSON format and includes the following fields:\n\n- `image`: A string representing the URL of the random fox image.\n    \n- `link`: A string representing the URL of the source for the random fox image.\n    \n\n### JSON Schema\n\n``` json\n{\n    \"type\": \"object\",\n    \"properties\": {\n        \"image\": {\n            \"type\": \"string\"\n        },\n        \"link\": {\n            \"type\": \"string\"\n        }\n    }\n}\n\n ```"
 					},
