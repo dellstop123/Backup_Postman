@@ -18,7 +18,7 @@
 								"id": "66c3aaaa-c093-4283-833a-4903054bec7c",
 								"exec": [
 									"pm.test(\"Response status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
+									"    pm.response.to.have.status(201);",
 									"});",
 									"",
 									"",
