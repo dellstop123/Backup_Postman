@@ -17,26 +17,41 @@
 							"script": {
 								"id": "66c3aaaa-c093-4283-833a-4903054bec7c",
 								"exec": [
-									"function add(){",
-									"",
-									"c = a+b;",
-									"return c;",
-									"",
-									"}",
-									"",
-									"",
-									"",
-									"pm.test(\"Status code is 200\", function () {",
-									"    var sum = add(3,4);",
-									"    console.log(sum);",
+									"pm.test(\"Response status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
 									"",
 									"pm.test(\"Response time is less than 200ms\", function () {",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);",
 									"});",
 									"",
+									"",
+									"pm.test(\"Image and link fields are present in the response\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData).to.have.property('image');",
+									"    pm.expect(responseData).to.have.property('link');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Image is a non-empty string and in valid URL format\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.image).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Image should not be empty\");",
+									"    pm.expect(responseData.image).to.match(/^https?:\\/\\/.*/, \"Image should be a valid URL format\");",
+									"});",
+									"",
+									"",
+									"pm.test(\"Link is a non-empty string and in valid URL format\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.link).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Link should not be empty\");",
+									"    pm.expect(responseData.link).to.match(/^https?:\\/\\/[\\w\\-]+(\\.[\\w\\-]+)+[/#?]?.*$/, \"Link should be in valid URL format\");",
+									"});",
 									""
 								],
 								"type": "text/javascript",
@@ -51,7 +66,23 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{url}}floof/",
+						"url": {
+							"raw": "{{url}}floof/",
+							"host": [
+								"{{url}}floof"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "image",
+									"value": "{{foxImage}}",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
 						"description": "### Request Description\n\nThis endpoint makes an HTTP GET request to retrieve a random image and link of a fox. There are no request parameters involved in this request.\n\n### Response\n\nThe response for this request is in JSON format and includes the following fields:\n\n- `image`: A string representing the URL of the random fox image.\n    \n- `link`: A string representing the URL of the source for the random fox image.\n    \n\n### JSON Schema\n\n``` json\n{\n    \"type\": \"object\",\n    \"properties\": {\n        \"image\": {\n            \"type\": \"string\"\n        },\n        \"link\": {\n            \"type\": \"string\"\n        }\n    }\n}\n\n ```"
 					},
 					"response": []
