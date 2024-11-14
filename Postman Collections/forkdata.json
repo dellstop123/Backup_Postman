@@ -18,7 +18,7 @@
 								"id": "66c3aaaa-c093-4283-833a-4903054bec7c",
 								"exec": [
 									"pm.test(\"Response status code is 200\", function () {",
-									"    pm.response.to.have.status(201);",
+									"    pm.response.to.have.status(200);",
 									"});",
 									"",
 									"",
@@ -47,7 +47,8 @@
 									"",
 									"pm.test(\"Link is a non-empty string and in valid URL format\", function () {",
 									"    const responseData = pm.response.json();",
-									"    ",
+									"    console.log(responseData)",
+									"    pm.environment.set(\"foxImage\",responseData.image);",
 									"    pm.expect(responseData).to.be.an('object');",
 									"    pm.expect(responseData.link).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Link should not be empty\");",
 									"    pm.expect(responseData.link).to.match(/^https?:\\/\\/[\\w\\-]+(\\.[\\w\\-]+)+[/#?]?.*$/, \"Link should be in valid URL format\");",
@@ -66,6 +67,15 @@
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{url}}floof/",
 							"host": [
@@ -77,7 +87,7 @@
 							"query": [
 								{
 									"key": "image",
-									"value": "{{foxImage}}",
+									"value": "{{name}}",
 									"type": "text",
 									"disabled": true
 								}
